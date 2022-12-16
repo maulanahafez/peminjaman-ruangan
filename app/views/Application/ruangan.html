@@ -10,6 +10,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="@{'public/stylesheets/style.css'}">
   <link rel="shortcut icon" href="@{'public/images/icon.svg'}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,13 +18,13 @@
     <div class="bread--crumb">
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="@{Application.index}">Home</a></li>
+          <li class="breadcrumb-item"><a href="@{Application.index}"><i class="fa-solid fa-house"></i></a></li>
           <li class="breadcrumb-item active" aria-current="page">Ruangan</li>
         </ol>
       </nav>
     </div>
     <div class="text-center mb-3">
-      <h1 class="mb-3">RUANGAN</h1>
+      <h1 class="mb-3"><i class="fa-solid fa-building"></i> RUANGAN</h1>
       <button type="button" class="btn btn-sm btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#ruanganModal">
         Tambah Ruangan
       </button>
@@ -47,8 +48,8 @@
         <td>${ruangan.lantai}</td>
         <td>${ruangan.kapasitas}</td>
         <td>
-          <a href="@{Application.ruanganupdate(ruangan.id)}" class="btn btn-sm btn-success">Edit</a>
-          <a href="@{Application.ruangandelete(ruangan.id)}" class="btn btn-sm btn-danger">Hapus</a>
+          <a href="@{Application.ruanganupdate(ruangan.id)}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+          <a href="@{Application.ruangandelete(ruangan.id)}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
         </td>
       </tr>
       #{/list}

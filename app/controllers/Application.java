@@ -68,6 +68,6 @@ public class Application extends Controller {
 
     public static void riwayatinsert(Riwayat newRiwayat){
         newRiwayat.save();
-        peminjaman();
+        riwayat();
     }
 }
